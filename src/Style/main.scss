@@ -40,14 +40,22 @@ body {
 		display: block;
 	}
 
+	
+	section {
+		&:not([role="feature"]) {
+			figure {
+			 	margin: 0 $contentMargin $contentMargin $contentMargin;
+			}
+		}
+	}
+
 	figure {
-		margin: 0 $contentMargin $contentMargin $contentMargin;
 		overflow: hidden;
 		&.cropped {
 			img {
 				max-width: 160%;
 				margin-left: -30%;
-				margin-top: -25%;
+				margin-top: -23%;
 			}
 			max-height: 55vw;
 		}
@@ -57,7 +65,6 @@ body {
 		display: block;
 		width: 100%;
 		background: grey;
-		margin-bottom: 1rem;
 	}
 
 	section {
@@ -96,6 +103,10 @@ body {
 				display: inline;
 			}
 		}
+	}
+
+	section[role="feature"] {
+		margin-bottom: 1rem;
 	}
 
 	section[role="showcase"] {

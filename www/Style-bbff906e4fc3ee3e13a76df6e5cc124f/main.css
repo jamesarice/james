@@ -100,20 +100,20 @@ body {
   body img {
     max-width: 100%;
     display: block; }
+  body section:not([role="feature"]) figure {
+    margin: 0 1rem 1rem 1rem; }
   body figure {
-    margin: 0 1rem 1rem 1rem;
     overflow: hidden; }
     body figure.cropped {
       max-height: 55vw; }
       body figure.cropped img {
         max-width: 160%;
         margin-left: -30%;
-        margin-top: -25%; }
+        margin-top: -23%; }
   body video {
     display: block;
     width: 100%;
-    background: grey;
-    margin-bottom: 1rem; }
+    background: grey; }
   body section.chrome {
     padding-top: 20px;
     background-color: #ebebeb;
@@ -138,6 +138,8 @@ body {
     color: grey; }
     body section[role="involvement"] ul li {
       display: inline; }
+  body section[role="feature"] {
+    margin-bottom: 1rem; }
   body section[role="showcase"] figure {
     border-radius: 3px; }
   body section[role="development"] h1 {
