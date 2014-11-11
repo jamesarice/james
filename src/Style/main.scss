@@ -37,19 +37,17 @@ body {
 	}
 	img {
 		max-width: 100%;
+		display: block;
 	}
 
 	figure {
-		margin: 0 $contentMargin 0 $contentMargin;
+		margin: 0 $contentMargin $contentMargin $contentMargin;
 		overflow: hidden;
-		figcaption {
-			margin: $contentMargin/2 0 $contentMargin 0;
-		}
 		&.cropped {
 			img {
-				max-width: 180%;
-				margin-left: -40%;
-				margin-top: -30%;
+				max-width: 160%;
+				margin-left: -30%;
+				margin-top: -25%;
 			}
 			max-height: 55vw;
 		}
@@ -63,6 +61,27 @@ body {
 	}
 
 	section {
+		&.chrome {
+			padding-top: 20px;
+			background-color: #ebebeb;
+			position: relative;
+			box-sizing: border-box;
+			border-radius: 4px;
+			width: 98%;
+			margin: 0 auto;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: $contentMargin/2;
+				top: 7px;
+				width: 100px;
+				height: 20px;
+				display: block;
+				background: url(/Asset/chrome-btn.svg) no-repeat;
+				background-size: 25px 6px;
+			}
+		}
 		p {
 			max-width: 80%;
 		}
@@ -76,6 +95,12 @@ body {
 			li {
 				display: inline;
 			}
+		}
+	}
+
+	section[role="showcase"] {
+		figure {
+			border-radius: 3px;
 		}
 	}
 

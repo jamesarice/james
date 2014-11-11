@@ -98,29 +98,48 @@ body {
           height: 60px;
           line-height: 60px; }
   body img {
-    max-width: 100%; }
+    max-width: 100%;
+    display: block; }
   body figure {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 1rem 1rem;
     overflow: hidden; }
-    body figure figcaption {
-      margin: 0.5rem 0 1rem 0; }
     body figure.cropped {
       max-height: 55vw; }
       body figure.cropped img {
-        max-width: 180%;
-        margin-left: -40%;
-        margin-top: -30%; }
+        max-width: 160%;
+        margin-left: -30%;
+        margin-top: -25%; }
   body video {
     display: block;
     width: 100%;
     background: grey;
     margin-bottom: 1rem; }
-  body section p {
-    max-width: 80%; }
+  body section.chrome {
+    padding-top: 20px;
+    background-color: #ebebeb;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 98%;
+    margin: 0 auto; }
+    body section.chrome::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 7px;
+      width: 100px;
+      height: 20px;
+      display: block;
+      background: url(/Asset/chrome-btn.svg) no-repeat;
+      background-size: 25px 6px; }
+    body section p {
+      max-width: 80%; }
   body section[role="involvement"] h1 > span {
     color: grey; }
     body section[role="involvement"] ul li {
       display: inline; }
+  body section[role="showcase"] figure {
+    border-radius: 3px; }
   body section[role="development"] h1 {
     margin: 1rem 1rem; }
     body section[role="development"] > section {
