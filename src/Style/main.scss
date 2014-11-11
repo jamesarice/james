@@ -35,11 +35,11 @@ body {
 			}
 		}
 	}
+
 	img {
 		max-width: 100%;
 		display: block;
 	}
-
 	
 	section {
 		&:not([role="feature"]) {
@@ -116,6 +116,8 @@ body {
 	}
 
 	section[role="development"] {
+		color: white;
+		background: rgba(0,0,0,0.5);
 		h1 {
 			margin: 1rem $contentMargin;
 		}
@@ -125,7 +127,6 @@ body {
 			overflow: auto;
 		}
 	}
-
 
 	section[role="overview"],
 	section[role="further-reading"],

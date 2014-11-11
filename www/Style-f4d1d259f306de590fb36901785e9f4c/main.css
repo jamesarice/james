@@ -142,8 +142,11 @@ body {
     margin-bottom: 1rem; }
   body section[role="showcase"] figure {
     border-radius: 3px; }
-  body section[role="development"] h1 {
-    margin: 1rem 1rem; }
+  body section[role="development"] {
+    color: white;
+    background: rgba(0, 0, 0, 0.5); }
+    body section[role="development"] h1 {
+      margin: 1rem 1rem; }
     body section[role="development"] > section {
       width: 100%;
       height: 10rem;
