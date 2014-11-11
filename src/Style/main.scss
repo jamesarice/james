@@ -36,10 +36,24 @@ body {
 		}
 	}
 
+	figure {
+		margin: 0 $contentMargin 0 $contentMargin;
+		figcaption {
+			margin: $contentMargin/2 0 $contentMargin 0;
+		}
+		margin-bottom: $contentMargin;
+		overflow: hidden;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
 	video {
 		display: block;
 		width: 100%;
 		background: grey;
+		margin-bottom: 1rem;
 	}
 
 	section[role="involvement"] {
