@@ -35,18 +35,24 @@ body {
 			}
 		}
 	}
+	img {
+		max-width: 100%;
+	}
 
 	figure {
 		margin: 0 $contentMargin 0 $contentMargin;
+		overflow: hidden;
 		figcaption {
 			margin: $contentMargin/2 0 $contentMargin 0;
 		}
-		margin-bottom: $contentMargin;
-		overflow: hidden;
-	}
-
-	img {
-		max-width: 100%;
+		&.cropped {
+			img {
+				max-width: 180%;
+				margin-left: -40%;
+				margin-top: -30%;
+			}
+			max-height: 55vw;
+		}
 	}
 
 	video {
@@ -54,6 +60,12 @@ body {
 		width: 100%;
 		background: grey;
 		margin-bottom: 1rem;
+	}
+
+	section {
+		p {
+			max-width: 80%;
+		}
 	}
 
 	section[role="involvement"] {
