@@ -1,0 +1,71 @@
+@import "reset.scss";
+@import "variables.scss";
+
+body {
+	text-rendering: optimizeLegibility;
+	li {
+		list-style: none;
+	}
+
+	header {
+		background: red;
+		width: 100%;
+		overflow: hidden;
+		height: $headerSize;
+		h1 {
+			background: grey;
+			float: left;
+			margin-left: $contentMargin;
+			height: $headerSize;
+			line-height: $headerSize;
+		}
+		nav {
+			float: right;
+			margin-right: $contentMargin;
+			height: $headerSize;
+			ul {
+				width: 100%;
+				background: green;
+				height: $headerSize;
+				li {
+					display: inline;
+					height: $headerSize;
+					line-height: $headerSize;
+				}
+			}
+		}
+	}
+
+	video {
+		display: block;
+		width: 100%;
+		background: grey;
+	}
+
+	section[role="involvement"] {
+		ul {
+			li {
+				display: inline;
+			}
+		}
+	}
+
+	section[role="development"] {
+		h1 {
+			margin: 1rem $contentMargin;
+		}
+		> section {
+			width: 100%;
+			height: 10rem;
+			overflow: auto;
+		}
+	}
+
+
+	section[role="overview"],
+	section[role="further-reading"],
+	aside[role="other-projects"],
+	footer {
+		margin: 1rem $contentMargin;
+	}
+}

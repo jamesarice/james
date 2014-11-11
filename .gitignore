@@ -1,0 +1,8 @@
+*.sublime-*
+assets/.sass-cache/*
+assets/.sass-cache/*/*
+assets/.sass-cache*
+assets/style/.sass-cache/*
+assets/style/.sass-cache/*/*
+assets/style/.sass-cache*
+*.scssc
