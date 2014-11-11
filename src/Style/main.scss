@@ -57,6 +57,9 @@ body {
 	}
 
 	section[role="involvement"] {
+		h1 > span {
+			color: grey;
+		}
 		ul {
 			li {
 				display: inline;

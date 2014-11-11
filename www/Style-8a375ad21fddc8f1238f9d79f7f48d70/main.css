@@ -110,8 +110,10 @@ body {
     width: 100%;
     background: grey;
     margin-bottom: 1rem; }
-  body section[role="involvement"] ul li {
-    display: inline; }
+  body section[role="involvement"] h1 > span {
+    color: grey; }
+    body section[role="involvement"] ul li {
+      display: inline; }
   body section[role="development"] h1 {
     margin: 1rem 1rem; }
     body section[role="development"] > section {
