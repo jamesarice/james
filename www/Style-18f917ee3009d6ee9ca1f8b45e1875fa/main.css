@@ -153,3 +153,5 @@ body {
       overflow: auto; }
   body section[role="overview"], body section[role="further-reading"], body aside[role="other-projects"], body footer {
     margin: 1rem 1rem; }
+  body footer {
+    margin-bottom: 2rem; }

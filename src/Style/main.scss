@@ -134,4 +134,9 @@ body {
 	footer {
 		margin: 1rem $contentMargin;
 	}
+
+	footer {
+		margin-bottom: $contentMargin*2;
+	}
+
 }
