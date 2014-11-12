@@ -59,6 +59,22 @@ body {
 			}
 			max-height: 55vw;
 		}
+		&.vector-logo {
+			padding-top: 100%;
+  			padding-top: 50%;
+  			box-sizing: border-box;
+  			position: relative;
+  			text-align: center;
+			img {
+				width: $logo-small;
+				position: absolute;
+				top: calc(50% - #{$logo-small-height});
+				left: calc(50% - (#{$logo-small} /2));
+			}
+		}
+		&#in2wrk-logo {
+			background: #209cae;
+		}
 	}
 
 	video {

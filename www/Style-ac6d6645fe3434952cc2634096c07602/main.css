@@ -110,6 +110,19 @@ body {
         max-width: 160%;
         margin-left: -30%;
         margin-top: -23%; }
+    body figure.vector-logo {
+      padding-top: 100%;
+      padding-top: 50%;
+      box-sizing: border-box;
+      position: relative;
+      text-align: center; }
+      body figure.vector-logo img {
+        width: 50%;
+        position: absolute;
+        top: calc(50% - 25%);
+        left: calc(50% - (50% /2)); }
+    body figure#in2wrk-logo {
+      background: #209cae; }
   body video {
     display: block;
     width: 100%;
