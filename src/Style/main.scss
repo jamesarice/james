@@ -2,11 +2,18 @@
 @import "variables.scss";
 
 body {
+
+	// Base styles
 	text-rendering: optimizeLegibility;
+	font-family: sans-serif;
+	font-size: 1rem;
+	line-height: 1.2rem;
+
 	li {
 		list-style: none;
 	}
 
+	// Header
 	header {
 		background: red;
 		width: 100%;
@@ -35,20 +42,41 @@ body {
 			}
 		}
 	}
-
-	img {
-		max-width: 100%;
-		display: block;
-	}
 	
+	// Global section styles
 	section {
+		overflow: hidden;
 		&:not([role="feature"]) {
 			figure {
 			 	margin: 0 $contentMargin $contentMargin $contentMargin;
+				border-radius: 3px;
+				&.chrome {
+					video {
+						border-top-left-radius: 0;
+						border-top-right-radius: 0;					
+					}
+				}
 			}
+			video {
+				border-radius: 3px;
+			}
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin: 1rem 0 0.2rem 0;
+		}
+		p {
+			max-width: 90%;
 		}
 	}
 
+	section[role="overview"],
+	section[role="further-reading"],
+	aside[role="other-projects"],
+	footer {
+		margin: 1rem $contentMargin;
+	}
+
+	// Figure styles
 	figure {
 		overflow: hidden;
 		&.cropped {
@@ -56,9 +84,9 @@ body {
 				width: 160%;
 				max-width: 160%;
 				margin-left: -30%;
-				margin-top: -23%;
+				margin-top: -20%;
 			}
-			max-height: 55vw;
+			max-height: 60vw;
 		}
 		&.vector-logo {
 			padding-top: 100%;
@@ -77,22 +105,36 @@ body {
 			background: #209cae;
 		}
 	}
-
-	video {
+	
+	// Media
+	img {
+		max-width: 100%;
 		display: block;
-		width: 100%;
-		background: grey;
-		overflow: hidden;
 	}
-
+	video {
+		max-width: 100%;
+		display: block;
+	}
+	section[role="feature"] {
+		video {
+			display: block;
+			width: 100%;
+			background: grey;
+			overflow: hidden;
+		}
+		&.chrome {
+			width: 98%;
+			margin: 0 auto;
+			margin-bottom: $contentMargin;
+		}
+	}
 	.embed-container { 
 		position: relative; 
 		padding-bottom: 56.25%; 
 		height: 0; 
 		overflow: hidden; 
 		max-width: 100%; 
-		height: auto; 
-
+		height: auto;
 		iframe, object, embed {
 			position: absolute; 
 			top: 0; 
@@ -101,55 +143,65 @@ body {
 			height: 100%;
 		}
 	} 
-
-	section {
-		&.chrome {
-			padding-top: 20px;
-			background-color: #ebebeb;
-			position: relative;
-			box-sizing: border-box;
-			border-radius: 4px;
-			width: 98%;
-			margin: 0 auto;
-
-			&::before {
-				content: '';
-				position: absolute;
-				left: $contentMargin/2;
-				top: 7px;
-				width: 100px;
-				height: 20px;
-				display: block;
-				background: url(/Asset/chrome-btn.svg) no-repeat;
-				background-size: 25px 6px;
-			}
-		}
-		p {
-			max-width: 80%;
+	.chrome {
+		padding-top: 20px;
+		background-color: #ebebeb;
+		position: relative;
+		box-sizing: border-box;
+		border-radius: 4px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: $contentMargin/2;
+			top: 7px;
+			width: 100px;
+			height: 20px;
+			display: block;
+			background: url(/Asset/chrome-btn.svg) no-repeat;
+			background-size: 25px 6px;
 		}
 	}
 
-	section[role="involvement"] {
+	// Overview styles
+	section[role="overview"] {
+		> h1 {
+			font-size: 1.4rem;
+		}
+	}
+
+	// List styles
+	section[role="involvement"],
+	section[role="output"],
+	section[role="client"] {
 		h1 > span {
 			color: grey;
+		}
+		p {
+			text-transform: uppercase;
+			font-size: 0.8rem;
 		}
 		ul {
 			li {
 				display: inline;
+				text-transform: uppercase;
+				font-size: 0.8rem;
 			}
 		}
 	}
 
+	// Feature styles
 	section[role="feature"] {
 		margin-bottom: 1rem;
 	}
 
+	// Showcase styles
 	section[role="showcase"] {
 		figure {
 			border-radius: 3px;
 		}
 	}
 
+	// Developement styles
 	section[role="development"] {
 		color: white;
 		background: rgba(0,0,0,0.5);
@@ -162,14 +214,8 @@ body {
 			overflow: auto;
 		}
 	}
-
-	section[role="overview"],
-	section[role="further-reading"],
-	aside[role="other-projects"],
-	footer {
-		margin: 1rem $contentMargin;
-	}
-
+	
+	// Footer styles
 	footer {
 		margin-bottom: $contentMargin*2;
 	}
