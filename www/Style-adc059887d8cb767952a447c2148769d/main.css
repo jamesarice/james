@@ -153,6 +153,9 @@ body {
       width: 98%;
       margin: 0 auto;
       margin-bottom: 1rem; }
+      body section[role="feature"].chrome video {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; }
   body .embed-container {
     position: relative;
     padding-bottom: 56.25%;

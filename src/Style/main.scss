@@ -127,6 +127,10 @@ body {
 			width: 98%;
 			margin: 0 auto;
 			margin-bottom: $contentMargin;
+			video {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;	
+			}
 		}
 	}
 	.embed-container { 
