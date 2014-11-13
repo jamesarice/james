@@ -68,12 +68,13 @@ body {
 			max-width: 90%;
 		}
 	}
-
+	
+	section[role="part-project"] > h1,
 	section[role="overview"],
 	section[role="further-reading"],
 	aside[role="other-projects"],
 	footer {
-		margin: 1rem $contentMargin;
+		margin: $contentMargin;
 	}
 
 	// Figure styles

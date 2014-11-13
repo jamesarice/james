@@ -114,8 +114,8 @@ body {
       margin: 1rem 0 0.2rem 0; }
     body section p {
       max-width: 90%; }
-  body section[role="overview"], body section[role="further-reading"], body aside[role="other-projects"], body footer {
-    margin: 1rem 1rem; }
+  body section[role="part-project"] > h1, body section[role="overview"], body section[role="further-reading"], body aside[role="other-projects"], body footer {
+    margin: 1rem; }
   body figure {
     overflow: hidden; }
     body figure.cropped {
