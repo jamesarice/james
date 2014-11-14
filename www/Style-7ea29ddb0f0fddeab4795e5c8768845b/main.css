@@ -119,15 +119,14 @@ body {
   body figure {
     overflow: hidden; }
     body figure.cropped {
-      max-height: 60vw; }
+      max-height: 70vw; }
       body figure.cropped img {
         width: 160%;
         max-width: 160%;
         margin-left: -30%;
-        margin-top: -20%; }
+        margin-top: -18vw; }
     body figure.vector-logo {
-      padding-top: 100%;
-      padding-top: 50%;
+      padding-top: 55%;
       box-sizing: border-box;
       position: relative;
       text-align: center; }
