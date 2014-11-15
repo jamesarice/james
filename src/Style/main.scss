@@ -22,25 +22,41 @@ body {
 		h1 {
 			background: grey;
 			float: left;
-			margin-left: $contentMargin;
-			height: $headerSize;
-			line-height: $headerSize;
+			a {
+				padding: 0 $contentMargin;
+				height: $headerSize;
+				line-height: $headerSize;
+				display: inline-block;
+			}
 		}
 		nav {
 			float: right;
-			margin-right: $contentMargin;
 			height: $headerSize;
 			ul {
 				width: 100%;
 				background: green;
 				height: $headerSize;
 				li {
-					display: inline;
-					height: $headerSize;
-					line-height: $headerSize;
+					display: inline-block;
+					a {
+						padding: 0 $contentMargin;
+						height: $headerSize;
+						line-height: $headerSize;
+						display: inline-block;
+					}
 				}
 			}
 		}
+	}
+
+	a[target="_blank"]:after {
+		content: "\29C9";
+		color: #666666;
+		outline: 0;
+		border: 0;
+		margin-left: $contentMargin /4;
+		text-decoration: none;
+		display: inline-block;
 	}
 	
 	// Global section styles
@@ -72,7 +88,7 @@ body {
 	section[role="part-project"] > h1,
 	section[role="overview"],
 	section[role="further-reading"],
-	aside[role="other-projects"],
+	aside[role="other-projects"] h1,
 	footer {
 		margin: $contentMargin;
 	}
@@ -180,15 +196,16 @@ body {
 		h1 > span {
 			color: grey;
 		}
-		p {
+		
+		p, ul li {
 			text-transform: uppercase;
 			font-size: 0.8rem;
 		}
+
 		ul {
 			li {
 				display: inline;
-				text-transform: uppercase;
-				font-size: 0.8rem;
+				margin-right: 0.5rem;
 			}
 		}
 	}
@@ -203,6 +220,39 @@ body {
 		figure {
 			border-radius: 3px;
 		}
+		p {
+			margin: $contentMargin;
+			margin-top: $contentMargin *1.5;
+			position: relative;
+			&::before {
+				content: "";
+				width: 4px;
+				height: $contentMargin *2;
+				top: -$contentMargin *2.5;
+				left: $contentMargin;
+				position: absolute;
+				background-color: red;
+			}
+			a {
+				float: left;
+				position: relative;
+				padding-left: $contentMargin *2;
+				&::before {
+					content: "";
+					width: 4px;
+					height: $contentMargin *2;
+					left: $contentMargin;
+					position: absolute;
+					background-color: red;
+				}
+				&.process {
+					font-size: 0.8rem;
+					margin-top: $contentMargin /2;
+					text-decoration: none;
+					display: inline-block;
+				}
+			}
+		}
 	}
 
 	// Developement styles
@@ -210,7 +260,7 @@ body {
 		color: white;
 		background: rgba(0,0,0,0.5);
 		h1 {
-			margin: 1rem $contentMargin;
+			margin: $contentMargin;
 		}
 		> section {
 			width: 100%;
@@ -218,10 +268,47 @@ body {
 			overflow: auto;
 		}
 	}
+
+	section[role="further-reading"] {
+		margin-bottom: $contentMargin*2;
+		ul {
+			li {
+				margin: 0.8rem 0;
+			}
+		}
+	}
+
+	aside[role="other-projects"] {
+		nav {
+			ul {
+				li {
+					a {
+						height: $contentMargin *4;
+						line-height: $contentMargin *4;
+						border-top: 1px solid black;
+						padding-left: $contentMargin;
+						width: 100%;
+						display: block;
+						text-decoration: none;
+					}
+					&:last-of-type {
+						border-bottom: 1px solid black;
+					}
+				}
+			}
+		}
+	}
 	
 	// Footer styles
 	footer {
+		margin-top: $contentMargin*2;
 		margin-bottom: $contentMargin*2;
+		nav {
+			a {
+				height: $contentMargin *2;
+				line-height: $contentMargin *2;
+			}
+		}
 	}
 
 }
